@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //1.基本格式
+        var p={name:"张三",sex:"男"}
+        console.log(p.name)
+        //2.嵌套格式
+        var p1=[
+            {name:"张三",sex:"男"},
+            {name:"李四",sex:"男"},
+            {name:"王五",sex:"女"}
+        ]
+        console.log(p1[1].sex)
+        var p2={person:[{name:"张三",sex:"男"},
+        {name:"李四",sex:"男"},
+        {name:"王五",sex:"女"}]
+        }
+        console.log(p2.person[2].name)
+        console.log("json对象的获取")
+        console.log("p")
+        for(var x in p)
+        {
+            console.log(x+" "+p[x])
+        }
+        console.log("p1")
+        for(var i=0;i<p1.length;i++)
+        {
+           var x=p1[i];
+           for(var y in  x)
+           {
+               console.log(y+" "+x[y])
+           }
+
+        }
+        for(var x in p2)
+        {
+            var y=p2[x];
+           for(var i=0;i<y.length;i++)
+           {
+
+               for(var z in y[i])
+               {
+                   console.log(z+' '+y[i][z])
+               }
+           }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

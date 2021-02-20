@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        function  fun() {
+             $.ajax({
+                 url:"demo1?username=张三&age=18",
+                 type:"GET",
+                 success:function (data1) {
+                    console.log(data1)
+                 },
+                 error:function () {
+                  console.log("未接收到数据")
+                 }
+             })
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="提交" onclick="fun()">
+</body>
+</html>

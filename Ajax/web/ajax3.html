@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        function fun()
+        {
+            $.get("demo1",{username:"zhangsan",age:"12"},function (data) {
+             console.log(data)
+            })
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="提交" onclick="fun()">
+</body>
+</html>

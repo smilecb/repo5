@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(function () {
+           $("#btn").click(function () {
+               var username=$("#username").val()
+               alert(username)
+         $.ajax(
+             {
+                 url:"demo1",
+                 type:"POST",
+                 data:{username:username},
+                 success:function(data)
+                 {
+                     console.log(data)
+                     console.log(data.username)
+
+                 },
+                 dataType:"json"
+             }
+         )
+           })
+        })
+    </script>
+</head>
+<body>
+<input type="text" id="username" >
+<input type="button" id="btn" value="提交">
+</body>
+</html>
